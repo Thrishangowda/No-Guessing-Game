@@ -1,0 +1,29 @@
+package tmg;
+import java.util.*;
+
+public class NumberGuessingGame {
+
+	public static void main(String[] args) {
+		
+		while(true) {
+		System.out.println("enter your guess");
+		Random ran=new Random();
+		int randomNumber=ran.nextInt(100)+1;
+		Scanner sc=new Scanner(System.in);
+		int playerGuess=sc.nextInt();
+		if(playerGuess==randomNumber) {
+			System.out.println("correct! you win");
+			break;
+		}
+		else if(randomNumber>playerGuess ) {
+			System.out.println("nop! The number is higher");
+			System.out.println("the random is"+randomNumber);
+		}
+		else {
+			System.out.println("the no is lower");
+			System.out.println("the random is"+randomNumber);
+		}
+		}
+	}
+
+}
